@@ -1,0 +1,327 @@
+<%- include('./partials/default/header') %> 
+
+<!-- ===========================SECTION 1======================================================= -->
+<section class="probootstrap-intro" style="background-image: url(img/BK-001.jpg);" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 probootstrap-intro-text">
+                <h1 class="probootstrap-animate" data-animate-effect="fadeIn" style="color:rgb(17, 128, 76); font-family: Liberation San;">Scope Of
+                    <hr>Service</h1>
+                <div class="probootstrap-subtitle probootstrap-animate" data-animate-effect="fadeIn">
+                    <h2 style="color:rgb(168, 207, 69); font-family: Liberation San;">MODEL PRIME ng-ltd</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span style="color:greenyellow" class="probootstrap-animate"><a class="probootstrap-scroll-down js-next"
+            href="#next-section">Scroll down <i class="icon-chevron-down"></i></a></span>
+</section>
+
+
+<!-- ===========================MAIN SECTION 1======================================================= -->
+<main>
+    <section id="next-section" class="probootstrap-section">
+        <!-- --------------------INTRO---------------------- -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 probootstrap-relative">
+                    <p style="text-align: justify;">
+                     <%= newestAbout.servicesAbout %> 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- --------------------ARCHITECTURE---------------------- -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 probootstrap-relative">
+                    <h4 class="probootstrap-heading mt0 mb50">ARCHITECTURE</h4>
+                    <ul class="probootstrap-owl-navigation absolute right">
+                        <li><a href="#" class="probootstrap-owl-prev"><i class="icon-chevron-left"></i></a></li>
+                        <li><a href="#" class="probootstrap-owl-next"><i class="icon-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 probootstrap-relative">
+                    <div class="owl-carousel owl-carousel-carousel">
+                        <%architecture.forEach(architecture => {%>
+
+                            <div class="item">
+                                <div class="probootstrap-program">
+                                    <a href="#"><img src="<%= architecture.servicesImage %> " alt="Free Bootstrap Template by uicookies.com"
+                                            class="img-responsive img-rounded"></a>
+                                    <h3><%= architecture.servicesName %> </h3>
+                                </div>
+                            </div>
+                            
+                        <% }) %> 
+                       
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/industry.jpg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Education and Industrial Buildings</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/hotel..jpg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Hotels and Hospitality Facilities</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/hospital.jpg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Medical and Institutional Buildings</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/housing.jpg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Residential Buildings and Estates</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/sport.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Sports and Recreational Facilities</h3>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- --------------------ENGINEERING---------------------- -->
+    <section class="probootstrap-section probootstrap-border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 probootstrap-relative">
+                    <h4 class="probootstrap-heading mt0 mb50">ENGINEERING</h4>
+                    <ul class="probootstrap-owl-navigation absolute right">
+                        <li><a href="#" class="probootstrap-owl-prev2"><i class="icon-chevron-left"></i></a></li>
+                        <li><a href="#" class="probootstrap-owl-next2"><i class="icon-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 probootstrap-relative">
+                    <div class="owl-carousel owl-carousel-carousel2">
+
+                        <%engineering.forEach(engineering => {%>
+
+                            <div class="item">
+                                <div class="probootstrap-program">
+                                    <a href="#"><img src="<%= engineering.servicesImage %> " alt="Free Bootstrap Template by uicookies.com"
+                                            class="img-responsive img-rounded"></a>
+                                    <h3><%= engineering.servicesName %> </h3>
+                                </div>
+                            </div>
+                            
+                        <% }) %> 
+                        
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/CSEE.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Civil, Structural and Environmental</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/IADE.jpg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Dams and Irrigation</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/Plumbing MEAP.jfif"
+                                        alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Mechanical, Electrical and Plumbing</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/PARE.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Power and Renewable Energy Technologies</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/RBAR.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Roads, Bridges and Railways</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/TTP.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Traﬃc Transportation Planning</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/WSTSD.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Water Supply & Treatment, Sewage and Drainage
+                                </h3>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------INTERIOR---------------------- -->
+    <section class="probootstrap-section probootstrap-border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 probootstrap-relative">
+                    <h4 class="probootstrap-heading mt0 mb50">INTERIORS</h4>
+                    <ul class="probootstrap-owl-navigation absolute right">
+                        <li><a href="#" class="probootstrap-owl-prev3"><i class="icon-chevron-left"></i></a></li>
+                        <li><a href="#" class="probootstrap-owl-next3"><i class="icon-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 probootstrap-relative">
+                    <div class="owl-carousel owl-carousel-carousel3">
+                        
+                        <%interior.forEach(interior => {%>
+
+                            <div class="item">
+                                <div class="probootstrap-program">
+                                    <a href="#"><img src="<%= interior.servicesImage %> " alt="Free Bootstrap Template by uicookies.com"
+                                            class="img-responsive img-rounded"></a>
+                                    <h3><%= interior.servicesName %> </h3>
+                                </div>
+                            </div>
+                            
+                        <% }) %>                         
+
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/DS.jfif" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Detection Systems</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/furnishes.jpg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Furnishing</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/illumination.jfif"
+                                        alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>illumination</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/RE&ME.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Renovation and maintenance</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/CCTV-2.jpg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Security Systems</h3>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- --------------------SECURITY---------------------- -->
+      <section class="probootstrap-section probootstrap-border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 probootstrap-relative">
+                    <h4 class="probootstrap-heading mt0 mb50">SECURITY</h4>
+                    <ul class="probootstrap-owl-navigation absolute right">
+                        <li><a href="#" class="probootstrap-owl-prev3"><i class="icon-chevron-left"></i></a></li>
+                        <li><a href="#" class="probootstrap-owl-next3"><i class="icon-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 probootstrap-relative">
+                    <div class="owl-carousel owl-carousel-carousel3">
+                        
+                        <%security.forEach(security => {%>
+
+                            <div class="item">
+                                <div class="probootstrap-program">
+                                    <a href="#"><img src="<%= security.servicesImage %> " alt="Free Bootstrap Template by uicookies.com"
+                                            class="img-responsive img-rounded"></a>
+                                    <h3><%= security.servicesName %> </h3>
+                                </div>
+                            </div>
+                            
+                        <% }) %>                         
+
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/DS.jfif" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Detection Systems</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/furnishes.jpg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Furnishing</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/illumination.jfif"
+                                        alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>illumination</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/RE&ME.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Renovation and maintenance</h3>
+                            </div>
+                        </div> -->
+                        <!-- <div class="item">
+                            <div class="probootstrap-program">
+                                <a href="#"><img src="img/CCTV-2.jpg" alt="Free Bootstrap Template by uicookies.com"
+                                        class="img-responsive img-rounded"></a>
+                                <h3>Security Systems</h3>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<%- include('./partials/default/footer') %> 

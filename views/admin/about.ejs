@@ -1,0 +1,31 @@
+<%- include ('../partials/admin/sidebar') %> 
+<%- include ('../partials/admin/header') %>
+
+
+<div class="row">
+ 
+  <div class="white-box analytics-info">
+      <form action="/admin/aboutMP" method="POST" class="row">
+      
+          <div class="form-group col-lg-12 col-sm-6">
+              <label for="exampleFormControlFile1" class="box-title">About Model Prime (Side)</label> <br>
+             <textarea name="aboutSide" id="" cols="100" rows="5" placeholder="Explain what you do"></textarea>
+          </div>      
+          <div class="form-group col-lg-12 col-sm-6">
+            <label for="exampleFormControlFile1" class="box-title">About Model Prime (Main)</label> <br>
+           <textarea name="aboutMain" id="" cols="100" rows="15" placeholder="Explain what you do in Detail"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success" style="color: black; font-weight: bold;">About ModelPrime</button>
+      </form>
+  </div>
+
+
+
+
+
+
+
+
+
+<%- include('../partials/admin/footer') %> 

@@ -1,0 +1,97 @@
+/* login form styles */
+.login-form {
+  margin: 4rem auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(194, 238, 128);
+  padding: 4rem 1rem;
+  box-sizing: border-box;
+  border-radius: 0.2rem;
+  box-shadow: 2px 2px 2px inset grey, 2px 2px 2px grey;
+}
+
+.form-control {
+  width: 35vw;
+  padding: 0.4rem;
+  margin: 0.5rem 0rem;
+  display: flex;
+}
+
+.login-submit {
+  width: 35vw;
+  padding: 0.6rem;
+  margin: 0.5rem 0rem;
+  background-color: limegreen;
+  color: white;
+  font-size: 1rem;
+  font-weight: bolder;
+  border: none;
+  border-radius: .2rem;
+}
+.login-submit:hover{
+    background: linear-gradient(to left, rgb(112, 230, 112), rgb(35, 233, 35));
+}
+
+input::placeholder {
+  text-align: center;
+}
+input:focus{
+    border: .3rem solid lime;
+}
+
+.home-btn {
+  position: absolute;
+  top: 10%;
+  color: white;
+  background-color: lime;
+  border: none;
+  padding: .4rem;
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+.home-btn a {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: .8rem;
+}
+
+/* logout button */
+.d-flex{
+  margin-left: 8rem;
+}
+
+
+#side-menu li a{
+  color: white;
+}
+
+#side-menu li a:hover{
+  background-color: rgb(136, 253, 68);
+  color: rgb(3, 24, 43);
+  font-weight: bold;
+}
+
+#upProf label{
+  color: green;
+}
+
+#upProf input{
+  border-bottom: 1px solid rgb(184, 253, 184);
+  color: black;
+  font-weight: bold;
+}
+
+#upProf #inputField{
+  border-style: none;
+  border-bottom: 1px solid rgb(184, 253, 184);
+  color: black;
+  font-weight: bold;
+}
+
+#upProf h3{
+  font-weight: bold;
+  color: black;
+}

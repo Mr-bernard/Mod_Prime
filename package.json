@@ -1,0 +1,46 @@
+{
+  "name": "model_prime_nig_ltd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "engine": {
+    "node": "14.15.2",
+    "npm": "6.14.10"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.23.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^4.0.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-flash-messages": "^0.1.1",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "googleapis": "^67.0.0",
+    "hbs": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.14",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.17",
+    "nodemailer-mailgun-transport": "^2.0.0",
+    "nodemon": "^2.0.3",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {},
+  "author": "mr_bern",
+  "license": "ISC"
+}

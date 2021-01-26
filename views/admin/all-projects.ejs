@@ -1,0 +1,38 @@
+<%- include ('../partials/admin/sidebar') %> 
+<%- include ('../partials/admin/header') %><!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
+        
+                <!-- <div class="row">
+                    <div class="col-md-12">
+                        <div class="white-box">
+                            <h3 class="box-title">All Projects</h3> </div>
+                    </div>
+                </div> -->
+
+                <div class="row" style=" width: 100%;">
+
+                <%projects.forEach(projects => {%>
+                    
+                    <div class="card col-lg-4 col-md-4 col-sm-6 " style="width: 300px; margin: 1rem; background-color: rgb(129, 250, 82); padding: 1rem;">
+                        <div class="course-image">
+                          <img class="" src="<%= projects.projectImage %>" style="height: 200px; width: 100%;" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title" style="font-size: 2rem; font-weight: bolder;"><%= projects.projectName%></h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li style="list-style-type: none;"> <a class="btn" data-toggle="collapse" href="#one<%=projects._id %>" role="button" aria-expanded="false" aria-controls="collapseExample" style="width: 100%; background-color: #ffffff;color: #37373d; text-align: left;">
+                            <%= projects.projectDescription %> <span style="float: right;">
+                          </a></li>
+                          
+                        </ul>
+                        <div class="card-body">
+                          <a href="/admin/delete-project/<%= projects._id %> " class="card-link"><button class="btn btn-danger">Delete project</button></a>
+                        </div>
+                      </div>
+                <%})%>
+              </div>
+
+            </div>
+            <%- include('../partials/admin/footer') %> 

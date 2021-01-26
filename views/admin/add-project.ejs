@@ -1,0 +1,31 @@
+<%- include ('../partials/admin/sidebar') %> 
+<%- include ('../partials/admin/header') %>
+
+
+
+<!-- .row -->
+<div class="row">
+    <div class="col-lg-12 col-sm-6 col-xs-12">
+        <div class="white-box analytics-info" id="upProf" >
+            <h3 class="box-title">UPDATE PROJECT</h3>
+            <form action="/admin/project" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Select Image</label>
+                    <input type="file" name="projectImage" multiple="multiple" class="form-control-file"
+                        id="exampleFormControlFile1" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Project name</label>
+                    <input type="text" name="projectName" class="form-control" id="inputField"
+                        aria-describedby="emailHelp" placeholder="Enter project Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Project description</label>
+                    <input type="text" name="projectDescription" class="form-control" id="inputField"
+                        aria-describedby="emailHelp" placeholder="Enter project description" required>
+                </div>
+                <button type="submit" class="btn btn-success" style="color: black; font-weight: bold;">Add Project</button>
+            </form>
+        </div>
+    </div>
+<%- include('../partials/admin/footer') %> 

@@ -1,0 +1,92 @@
+<%- include('./partials/default/header') %> 
+
+<!-- ===========================SECTION 1======================================================= -->
+<section class="probootstrap-intro" style="background-image: url(img/BK-001.jpg);" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 probootstrap-intro-text">
+                <h1 class="probootstrap-animate" data-animate-effect="fadeIn" style="color:rgb(17, 128, 76); font-family: Liberation San;">Contact
+                    Us...
+                    <hr>
+                </h1>
+                <div class="probootstrap-subtitle probootstrap-animate" data-animate-effect="fadeIn">
+                    <h2 style="color:rgb(168, 207, 69); font-family: Liberation San;">MODEL PRIME ng-ltd</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span style="color:rgb(122, 194, 15)" class="probootstrap-animate"><a class="probootstrap-scroll-down js-next"
+            href="#next-section">Scroll down <i class="icon-chevron-down"></i></a>
+    </span>
+</section>
+
+
+<!-- ===========================MAIN SECTION 1======================================================= -->
+<main>
+    <section id="next-section" class="probootstrap-section">
+        <div class="container">
+
+            <div class="col-md-6">
+                <form action="contact/send" method="post" class="probootstrap-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Message</label>
+                        <textarea cols="30" rows="10" class="form-control" id="text" name="text"
+                            style="text-align: justify;" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" id="submit">
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="col-md-5 col-md-push-1">
+                <h3 class="mt0">Get In Touch</h3>
+                <ul class="probootstrap-contact-info">
+                    <li><i class="icon-location2"></i> <span>Rayfield-Zarmaganda Road, Besides Emerald Resort &
+                            Gardens</span></li>
+                    <li><i class="icon-mail"></i><span><a href="contact.html">modelprimeltd@gmail.com</a></span></li>
+                    <li><i class="icon-phone2"></i><span>+234-803-5860-723</span></li>
+                </ul>
+                <ul class="probootstrap-contact-info">
+                    <li><i class="icon-location2"></i> <span>Suite A106, No.22 Kigoma Street,Fair Trade Business
+                            Complex,
+                            Wuse Zone 7,FCT - Abuja, Nigeria</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    // TODO
+
+    $('form').on('submit', (e) => {
+        e.preventDefault();
+        const email = $('#email').val().trim();
+        const subject = $('#subject').val().trim();
+        const text = $('#text').val().trim();
+
+        const data = {
+            email,
+            subject,
+            text
+        };
+
+
+        $.post('/email', data, function () {
+            console.log('Server recieved our data');
+        });
+    })
+</script>
+<%- include('./partials/default/footer') %> 

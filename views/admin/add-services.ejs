@@ -1,0 +1,53 @@
+<%- include ('../partials/admin/sidebar') %> 
+<%- include ('../partials/admin/header') %>
+
+
+<div class="row">
+    <div class= "col-lg-12 col-xs-12 col-sm-6">
+        <div class="white-box analytics-info" id="upProf">
+            <h3 class="box-title">UPDATE SERVICES</h3>
+            <form action="/admin/all-services" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Select Image
+                    <input type="file" name="servicesImage" multiple="multiple" class="form-control-file"
+                        id="exampleFormControlFile1" required></label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Service name</label>
+                    <input type="text" name="servicesName" class="form-control" id="inputField"
+                        aria-describedby="emailHelp" placeholder="Service Name" required>
+                </div>
+                <div class="form-group">
+                    
+                    <label for="exampleInputEmail1">Services category</label>
+                    <!-- <input type="text" name="servicesCategory" class="form-control" id="inputField"
+                        aria-describedby="emailHelp" placeholder="Service Category" required> -->
+
+                        <select name="servicesCategory" class="form-control form-control-line">
+                            <option value="default" selected>Default</option>
+                            <%servicesCategory.forEach(servicesCategory => {%>    
+                            <option value="<%= servicesCategory %>" ><%= servicesCategory %> </option>
+                            <% }) %> 
+                            
+                        </select>
+                </div>
+                <button type="submit" class="btn btn-success" style="color: black; font-weight: bold;">Add Services</button>
+            </form>
+        </div>
+       
+       
+    </div>
+    <div class="white-box analytics-info col-lg-12 col-xs-12 col-sm-6"style="margin: ">
+        <form action="/admin/services-about" method="POST">
+        
+            <div class="form-group">
+                <label for="exampleFormControlFile1" class="box-title">Services about </label> <br>
+               <textarea name="servicesAbout" id="" cols="100" rows="5" placeholder="Explain what you do"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success" style="color: black; font-weight: bold;">About Services</button>
+        
+        </form>
+    </div>
+
+<%- include('../partials/admin/footer') %> 

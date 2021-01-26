@@ -1,0 +1,46 @@
+<%- include('../partials/admin/sidebar') %> 
+<%- include('../partials/admin/header') %> 
+<!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- /row -->
+                <div class="row">
+                    <div class="col-lg-8 col-md-6 col-sm-12">
+                        <div class="white-box" id="upProf" >
+                            <form action="/admin/profile-update" enctype="multipart/form-data"  method="POST" class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <label class="col-md-12">Full Name /</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="fullName" class="form-control form-control-line" value="<%= name %>"> </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="example-email" class="col-md-12">Email /</label>
+                                    <div class="col-md-12">
+                                        <input type="email" name="email" class="form-control form-control-line" value="<%= email %>" name="example-email" id="example-email"> </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="example-email" class="col-md-12">Phone Number /</label>
+                                    <div class="col-md-12">
+                                        <input type="tel" name="phone" class="form-control form-control-line" value="<%= phone%>" > </div>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label class="col-md-12">Avatar /</label>
+                                    <div class="col-md-12">
+                                        <input type="file" name="avatar" class="form-control form-control-line" > </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-success" style="color: black; font-weight: bold;">Update Profile</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+
+<%- include('../partials/admin/footer') %> 

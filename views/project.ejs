@@ -1,0 +1,40 @@
+<%- include('./partials/default/header') %> 
+
+<!-- ===========================SECTION 1======================================================= -->
+<section class="probootstrap-intro" style="background-image: url(img/BK-001.jpg);" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 probootstrap-intro-text">
+                <h1 class="probootstrap-animate" data-animate-effect="fadeIn" style="color:rgb(17, 128, 76); font-family: Liberation San;">Major
+                    <hr>Projects</h1>
+                <div class="probootstrap-subtitle probootstrap-animate" data-animate-effect="fadeIn">
+                    <h2 style="color:rgb(168, 207, 69); font-family: Liberation San;">MODEL PRIME ng-ltd</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span style="color:greenyellow" class="probootstrap-animate"><a class="probootstrap-scroll-down js-next"
+            href="#next-section">Scroll down <i class="icon-chevron-down"></i></a></span>
+</section>
+
+<!-- ===========================MAIN SECTION======================================================= -->
+<main style="padding: 0%;">
+    <section id="next-section" class="probootstrap-section" style="margin-left: 10%; margin-right: 10%;">
+        <!-- <div class="container"> -->
+            <div class="row">
+                <%projects.forEach(projects => {%>
+
+                    <div class="col-lg-3 col-md-3 col-sm-4" style="border-left: 1px solid green; margin-bottom: 10px; padding: 5px; padding-bottom: 0%;">
+                        <figure><a href="<%=projects.projectImage %> " class="image-popup"><img src="<%= projects.projectImage %>"
+                                    class="img-responsive img-rounded" ></a>
+                                    <h4 style="margin:2%; font-weight:bold;"><%= projects.projectDescription %> </h4>
+                        </figure>
+                    </div>
+                        
+                <%})%>
+            </div>
+        </div>
+    </section>
+</main>
+
+<%- include('./partials/default/footer') %> 

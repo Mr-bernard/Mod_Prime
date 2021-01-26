@@ -1,0 +1,53 @@
+<%- include('./partials/default/header') %> 
+
+<!-- ===========================SECTION 1======================================================= -->
+<section class="probootstrap-intro" style="background-image: url(img/BK-001.jpg);" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 probootstrap-intro-text">
+                <h1 class="probootstrap-animate" data-animate-effect="fadeIn" style="color:rgb(17, 128, 76); font-family: Liberation San;">MD/CEO
+                    <hr>
+                </h1>
+                <div class="probootstrap-subtitle probootstrap-animate" data-animate-effect="fadeIn">
+                    <h2 style="color:rgb(168, 207, 69); font-family: Liberation San;">MODEL PRIME ng-ltd</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span style="color:greenyellow" class="probootstrap-animate"><a class="probootstrap-scroll-down js-next"
+            href="#next-section">Scroll down <i class="icon-chevron-down"></i></a></span>
+</section>
+
+<!-- ===========================MAIN SECTION 1======================================================= -->
+<main>
+    <section id="next-section" class="probootstrap-section">
+        <div class="container">
+            <div class="row probootstrap-gutter60 mb50">
+                <div class="col-md-6">
+                    <h2 class="probootstrap-heading"><%= recentCeo.ceoName %> </h2>
+                    <p style="text-align: justify;">
+                        <h4>
+                            <%= recentCeo.ceoTitle %>  <br>
+                          <%= recentCeo.ceoPosition %> 
+                        </h4><br>
+                        <%= recentCeo.ceoSide %> 
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <figure>
+                        <img src="<%= recentCeo.profileImage %>" lt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                    </figure>
+                </div>
+            </div>
+            <div class="row probootstrap-gutter60">
+                <div class="col-md-12 mb30">
+                    <p style="text-align: justify;">
+                     <%= recentCeo.ceoMain %> 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<%- include('./partials/default/footer') %> 
