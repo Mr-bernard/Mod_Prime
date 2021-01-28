@@ -13,10 +13,10 @@ const AboutSchema = new Schema({
   },
   aboutHead:{
     type:String,
-    required:true
+    // required:true
   },
   aboutImage:{
-    type:String
+    // type:String
   }
 })
 

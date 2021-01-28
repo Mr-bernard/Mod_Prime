@@ -10,20 +10,20 @@
             <label for="exampleFormControlFile1">Profile Image</label><br>
             <span><input type="file" name="profileImage" multiple="multiple" class="form-control-file"
                 id="exampleFormControlFile1" required><br>
-                <img src="" alt="" width="200" height="200" style="border-radius: 25px;" ></span>
+                <img src="<%= mostRecentCeo.profileImage %> " alt="" width="200" height="200" style="border-radius: 25px;" ></span>
         </div>
         <div class="form-group col-lg-12 col-sm-6">
               <label for="exampleFormControlFile1" class="box-title">Titles (Side)</label> <br>
-                NAME: <input type="text" name="ceoName" style="margin:1rem ;" placeholder="Enter Name" value=""> <br>
-                TITLE: <input type="text" name="ceoTitle" style="margin:1rem ;" placeholder="Enter Title" value=""> <br>
-                POSITION: <input type="text" name="ceoPosition" style="margin:1rem ;" placeholder="Enter Position" value=""><br>
+                NAME: <input type="text" name="ceoName" style="margin:1rem ;" placeholder="Enter Name" value="<%=mostRecentCeo.ceoName %>"> <br>
+                TITLE: <input type="text" name="ceoTitle" style="margin:1rem ;" placeholder="Enter Title" value="<%=mostRecentCeo.ceoTitle %>"> <br>
+                POSITION: <input type="text" name="ceoPosition" style="margin:1rem ;" placeholder="Enter Position" value="<%=mostRecentCeo.ceoPosition %>"><br>
               <label for="exampleFormControlFile1" class="box-title">About The Director (Side)</label> <br>
-              <textarea name="ceoSide" id="" cols="100" rows="8" placeholder="A little about yourself"><%=  %> </textarea>
+              <textarea name="ceoSide" id="" cols="100" rows="8" placeholder="A little about yourself"><%= mostRecentCeo.ceoSide %> </textarea>
         </div>      
         <div class="form-group col-lg-12 col-sm-6">
               <label for="exampleFormControlFile1" class="box-title">About The Director (Main)</label>
               <br>
-              <textarea name="ceoMain" id="" cols="100" rows="15" placeholder="Explain who you are in Detail"></textarea>
+              <textarea name="ceoMain" id="" cols="100" rows="15" placeholder="Explain who you are in Detail"><%= mostRecentCeo.ceoMain%></textarea>
         </div>
 
         <button type="submit" class="btn btn-success" style="color: black; font-weight: bold;">Update CEO</button>
