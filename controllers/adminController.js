@@ -240,7 +240,7 @@ module.exports = {
         updatedAdmin.avatar = result.secure_url
       })
       await updatedAdmin.save();
-      res.redirect("/admin/profile");
+      res.redirect("/admin/index");
       console.log('Update was successfull:::::', updateProfiles);
       req.flash("success_msg", "Your update was Successful");
       
