@@ -13,7 +13,7 @@ const flash = require('connect-flash');
 const mongoose =  require('mongoose');
 const bcrypt = require('bcrypt');
 // const { Router } = require('express');
-// const DB = require('./config/configurations').MONGO_URI
+const DB = require('./config/configurations').MONGO_URI
 const {Admin} = require('./models/admin');
 const passport = require("passport");
 //passport config
@@ -28,7 +28,7 @@ app.use(methodOverride('_method'));
 
 
 // mongoose config
-mongoose.connect('mongodb://localhost/modelPrime', {
+mongoose.connect(DB, {
          useNewUrlParser: true,
          useUnifiedTopology:true,
          useCreateIndex: true,
@@ -132,4 +132,4 @@ app.use((req, res, next) => {
 
 // --LISTENING PORT ---------------------
 const port = process.env.PORT || 7000;
-app.listen(port, () => console.log(`port is listening at port http://localhost:${port}`));
+app.listen(port, () => console.log(`port is listening at port ${port}`));
