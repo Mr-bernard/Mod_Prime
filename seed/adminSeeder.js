@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const {Admin} = require('../models/admin')
-const DB = 'mongodb+srv://modelprime:modelprime@model-prime.fhtzg.mongodb.net/MODELPRIME?retryWrites=true&w=majority'
+const DB = 'mongodb+srv://modeprime:modelprime@model-prime.fhtzg.mongodb.net/MODELPRIME?retryWrites=true&w=majority'
 const bcrypt = require('bcrypt')
 
 mongoose.Promise = global.Promise;
