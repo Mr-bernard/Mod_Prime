@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {loginPost, loginGet, indexGet, aboutGet, add_servicesGet, principalGet, servicesPost, delete_services, add_projectGet, logout, projectPost, all_projectsGet, delete_project,profile_updateGet, profile_updatePost, all_servicesGet,  about_servicesPost, aboutPost, principalPost, forgot_password, reset_password,reset_passwordPOST, forget_passwordGET}  = require('../controllers/adminController')
+const {loginPost, loginGet, indexGet, homeGet, homePost, aboutGet, aboutPost, add_servicesGet, principalGet, servicesPost, delete_services, add_projectGet, logout, projectPost, all_projectsGet, delete_project,profile_updateGet, profile_updatePost, all_servicesGet,  about_servicesPost, principalPost, forgot_password, reset_password,reset_passwordPOST, forget_passwordGET}  = require('../controllers/adminController')
 const auth = require("../config/auth");
 const isUser = auth.isUser;
 const {upload} = require('../config/configurations')
@@ -12,16 +12,23 @@ const {upload} = require('../config/configurations')
 router.route('/login')
 .get(loginGet)
 .post(loginPost)
+
+// LOGOUT HANDLER
 router.get('/logout', logout)
 
 // INDEX ROUTES
 router.get('/index',isUser,  indexGet)
 
+// HOME ROUTES
+router.get('/home', isUser, homeGet)
+
+router.post('/homepost', upload.single('homeImage'), isUser, homePost)
+
 
 // ABOUT ROUTES
 router.get('/about', isUser, aboutGet)
 router.post('/aboutMP', isUser, aboutPost)
-router.post('/aboutCEO', upload.single('profileImage'), isUser,principalPost )
+router.post('/aboutCEO', upload.single('profileImage'), isUser, principalPost )
 
 
 

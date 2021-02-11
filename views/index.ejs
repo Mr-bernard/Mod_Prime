@@ -20,32 +20,26 @@
 
 <!-- ===========================MAIN SECTION 1======================================================= -->
 <main>
+      <%- include ("./partials/messages"); %>
+        
     <section id="next-section" class="probootstrap-section">
         <div class="container">
             <div class="row probootstrap-gutter60 mb50">
                 <div class="col-md-6">
                     <figure>
-                        <img src="img/about_3.jpg" lt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+                        <img src="<%= recentHome.homeImage  %> " lt="Free Bootstrap Template by uicookies.com" class="img-responsive">
                     </figure>
                 </div>
                 <div class="col-md-6">
-                    <h2 class="probootstrap-heading">MODEL PRIME</h2>
-                    <p style="text-align: justify;">Model Prime (Nigeria) limited is firm of Engineers, Architects and
-                        Projects Managers incorporated in Nigeria by the
-                        Corporate Affairs Commission in 2004 (RC608687). The Company however started out as Model Prime
-                        Engineers also registered in 1994
-                        by the Corporate Affairs Commission under yhe Companies and Allied matters act of 1990. We
-                        maintain corporate offices in Jos and
-                        Abuja as well as site offices wherever we have projects around the country.</p>
+                    <h2 class="probootstrap-heading"><%= recentHome.homeHead %> </h2>
+                    <p style="text-align: justify;"><%= recentHome.homeSide %> </p>
                     <p><a href="/about" class="btn btn-success">Read more about us</a></p>
                 </div>
             </div>
             <div class="row probootstrap-gutter60">
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">My Mission</h4>
-                    <p>&ldquo;TO CREATE QUALITATIVE, UNIQUE AND RELIABLE SOLUTIONS IN THE CONSULTING AND CONSTRUCTION
-                        SUB-SECTORS OF THE BUILT
-                        ENVIRONMENT, MAKING A DIFFERENCE.&rdquo;</p>
+                    <p><%= recentHome.mission %> </p>
                 </div>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">CORE VALUES</h4>
@@ -81,9 +75,7 @@
                 </div>
                 <div class="col-md-4 mb30">
                     <h4 class="mb30">Vision</h4>
-                    <p>&ldquo;TO BE A KNOWN BRAND IN THE CONSULTING AND CONSTRUCTION SUB-SECTORS OF THE BUILT
-                        ENVIRONMENT
-                        DISTINGUISHED BY QUALITY, EXCELLENCE AND INTEGRITY.&rdquo;</p>
+                    <p><%= recentHome.vision %> </p>
                 </div>
             </div>
         </div>

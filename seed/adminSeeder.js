@@ -18,7 +18,7 @@ mongoose
 
 const admin = new Admin({
     fullName:'MODEL PRIME NG',
-    email:'ituahbernard@gmail.com',
+    email:'muhammadsad224@gmail.com',
     password:'123abcd'
 })
 

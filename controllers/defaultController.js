@@ -4,14 +4,16 @@ const {whatWeDo} = require('../models/servicesAbout')
 const {AboutUs} = require('../models/aboutModelPrime')
 const {AboutCEO} = require('../models/aboutCEO')
 const {Admin} = require('../models/admin')
+const {Home} = require('../models/home')
 const aboutCEO = require('../models/aboutCEO')
 
 
 module.exports = {
-    indexGet : (req,res)=>{
-        res.render('index')
+    indexGet : async(req,res)=>{
+    const home = await Home.find({})
+    let recentHome = home[home.length-1]
+    res.render('index', {recentHome})
     },
-
 
     aboutGet : (req,res)=>{
         Admin.find({}).then((admin) => {
