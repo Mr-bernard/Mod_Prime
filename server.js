@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 const path = require('path');
+const cookieParser = require("cookie-parser");
 const methodOverride = require('method-override');
 const logger = require('morgan')
 const sendMail = require('./mail');
@@ -14,6 +15,7 @@ const mongoose =  require('mongoose');
 const bcrypt = require('bcrypt');
 // const { Router } = require('express');
 const DB = require('./config/configurations').MONGO_URI
+const {globalVariables} = require('./config/configurations')
 const {Admin} = require('./models/admin');
 const passport = require("passport");
 //passport config
@@ -40,21 +42,23 @@ mongoose.connect(DB, {
 
 //Data parsing
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded({
-    extended: true,
-}));
 
-
-
+// View engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', '.ejs');
+
+
+// static files
+app.use(express.static(path.join(__dirname, 'public')));
+
+// cookie parser init
+app.use(cookieParser());
 
 // bodyParser init
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-app.use(express.json());
+// session
 app.use(session({
     secret: 'secret',
     cookie: {max: 60000},
@@ -67,6 +71,11 @@ app.use(session({
     
 }))
 
+app.use(flash())
+
+// globalvariables Init
+app.use(globalVariables)
+
 
 //passport middleware config
 app.use(passport.initialize());
@@ -75,14 +84,6 @@ app.use(passport.session());
 
 
 
-app.use(flash())
-app.use((req, res, next) => {
-    res.locals.success_messages = req.flash("success");
-    res.locals.error_messages = req.flash("error");
-    res.locals.user = req.user ? true : false;
-    res.locals.session = req.session;
-    next();
-  });
 
 
 

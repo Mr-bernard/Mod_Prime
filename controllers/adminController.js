@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const _ = require('lodash')
 const {Admin} = require('../models/admin')
+const {Home} = require('../models/home')
 const {Project} = require('../models/projectCatalogue')
 const {Services} = require('../models/serviceCatalogue')
 const {whatWeDo} = require('../models/servicesAbout')
@@ -11,7 +12,8 @@ const {AboutCEO} = require('../models/aboutCEO')
 const passport = require("passport");
 const cloudinary = require('../config/cloudinary')
 const smtpTransport = require('../config/mailer')
-const mail = require('../config/mail')
+const mail = require('../config/mail');
+const { vision } = require('googleapis/build/src/apis/vision');
 
 
 
@@ -23,6 +25,37 @@ module.exports = {
       let avatar =  req.user.avatar
       let pageTitle = "Profile"
       res.render('admin/index', { pageTitle, layout: "admin", name, email, avatar, phone});
+    },
+
+
+    homeGet: async(req, res) =>{
+      let pageTitle = 'Home'
+      const home = await Home.find({})
+      let recentHome = home[home.length-1]
+      res.render('admin/home', {pageTitle, recentHome, layout: "admin"});
+    },
+
+
+    homePost: async(req, res) =>{
+      const {homeSide, homeHead, mission, vision, homeMain } = req.body
+      const homeImage = req.file
+     if(!homeImage || !homeSide ||!homeHead || !vision || !mission){
+       console.log("All field required")
+    }else{
+       await cloudinary.v2.uploader.upload(req.file.path, async(err, result)=>{
+       let homeUpdate =await new Home({
+         homeHead: homeHead.toUpperCase(),
+         homeSide,
+         mission,
+         vision,      
+         homeImage:await result.secure_url
+       })
+       homeUpdate.save()
+       req.flash(
+        'success_msg','Home Updated successfully');
+       res.redirect('/admin/index')
+      })
+     }
     },
 
     aboutGet: (req, res) =>{
@@ -42,6 +75,9 @@ module.exports = {
         aboutSide
       })
       aboutsUs.save()
+      req.flash(
+        'success_msg','About Updated successfully');
+      req.flash('success', 'reg sucessful')
       res.redirect('/admin/index')
       console.log('saved')
     }
@@ -274,7 +310,7 @@ module.exports = {
         // LOGOUT HANDLE
     logout: (req, res) => {
       req.logOut();
-      req.flash({message:"You are logged out"});
+      req.flash('success_msg', "You are logged out");
       res.redirect("/");
     },
 

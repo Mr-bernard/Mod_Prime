@@ -1,0 +1,47 @@
+<%- include ('../partials/admin/sidebar') %> 
+<%- include ('../partials/admin/header') %>
+
+<style>
+  #no-resize{
+    resize: none;
+  }
+</style>
+
+
+
+<div class="row">
+  <div class="white-box analytics-info">
+      <form action="/admin/homepost" method="POST"  class="row" enctype="multipart/form-data">
+          
+          <div class="form-group" style="margin-left: 2rem;">
+            <label for="exampleFormControlFile1">Home Image ( Select Image before updating )</label><br> 
+            <span><input type="file" name="homeImage" multiple="multiple" class="form-control-file"
+                id="exampleFormControlFile1"> <br>
+                <img src="<%= recentHome.homeImage %>" alt="" style="width: 4rem; height: 4rem;">
+            </span>
+        </div>
+        <div class="form-group col-lg-12 col-sm-6">
+              <label for="exampleFormControlFile1" class="box-title">Home header</label> <br>
+              <input type="text" name="homeHead" style="margin:1rem ;" placeholder="Enter a new header" value="<%= recentHome.homeHead %>"> <br>
+              <label for="exampleFormControlFile1" class="box-title">Home (Side)</label> <br>
+              <textarea name="homeSide" id="no-resize" cols="100" rows="8" placeholder="A little about yourself"><%= recentHome.homeSide %></textarea>
+        </div>
+              <div class="form-group col-lg-12">
+              <label for="exampleFormControlFile1" class="box-title">Vision</label>
+                <br>
+                <textarea name="vision" id="no-resize" cols="100" rows="7" placeholder="Update vision"><%= recentHome.vision %></textarea>
+              </div>
+              <div class="form-group col-lg-12">
+              <label for="exampleFormControlFile1" class="box-title">Mission</label>
+                <br>
+                <textarea name="mission" id="no-resize" cols="100" rows="7" placeholder="Update mission"><%= recentHome.mission %></textarea>
+              </div>
+
+        <button type="submit" class="btn btn-success" style="color: black; font-weight: bold;">Update Home</button>
+      </form>
+    </div>
+
+
+
+
+<%- include('../partials/admin/footer') %> 

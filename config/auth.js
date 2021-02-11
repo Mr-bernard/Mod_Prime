@@ -2,8 +2,7 @@ exports.isUser = function (req, res, next) {
   if (req.isAuthenticated()) {
       return next()
   } else {
-      // req.flash('error', 'you have to login first')
-      // res.send('login first')
+      req.flash("error_msg", " Please Login First");
       res.redirect('/admin/login')
   }
 }
