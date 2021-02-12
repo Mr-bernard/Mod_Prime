@@ -13,9 +13,8 @@ const bodyParser =require('body-parser')
 const flash = require('connect-flash');
 const mongoose =  require('mongoose');
 const bcrypt = require('bcrypt');
-// const { Router } = require('express');
 const DB = require('./config/configurations').MONGO_URI
-const {globalVariables} = require('./config/configurations')
+const globalVariables = require('./config/configurations').globalVariables
 const {Admin} = require('./models/admin');
 const passport = require("passport");
 //passport config
@@ -71,19 +70,14 @@ app.use(session({
     
 }))
 
-app.use(flash())
-
-// globalvariables Init
-app.use(globalVariables)
-
-
 //passport middleware config
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(flash())
 
-
-
+// globalvariables Init
+app.use(globalVariables)
 
 
 
