@@ -36,7 +36,11 @@
                 <li><a href="/project">Projects</a></li>
                 <li><a href="/principal">MD/CEO</a></li>
                 <li><a href="/contact">Contact</a></li>
+                <%if (user) { %>
+                <li><a href="/admin/index">Dashboard</a></li>
+                <% } else { %> 
                 <li><a href="/admin/login">Login</a></li>
+                <% } %> 
             </ul>
             <ul class="probootstrap-header-social hidden-xs">
                 <li><a href="#"><i class="icon-twitter"></i></a></li>
